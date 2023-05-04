@@ -72,5 +72,10 @@ namespace VKR_ComputerService.Forms
 				.ToList();
 			OrdersAtWorkDataGridView.DataSource = ordersAtWork;
 		}
+
+		private void ServicePanelOpenButton_Click(object sender, EventArgs e)
+		{
+			new ServicePanel().ShowDialog();
+		}
 	}
 }

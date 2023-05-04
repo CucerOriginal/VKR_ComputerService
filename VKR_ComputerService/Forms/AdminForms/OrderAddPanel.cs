@@ -84,6 +84,10 @@ namespace VKR_ComputerService.Forms.AdminForms
 			}
 
 			_dbContext.SaveChanges();
+
+			MessageBox.Show("Заказ добавлен");
+
+			this.Close();
 		}
 
 		private void EmployeeDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

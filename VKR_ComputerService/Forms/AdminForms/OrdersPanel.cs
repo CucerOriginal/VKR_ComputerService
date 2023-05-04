@@ -30,6 +30,7 @@ namespace VKR_ComputerService.Forms.AdminForms
 				.Join(_dbContext.Clients, p => p.ClientId, b => b.Id, (p, b) => new { p.Id, EmployeeSecondname = p.Secondname, EmployeeName = p.Name, EmployeePhone = p.Phone, p.Note, p.CreatedData, p.StartData, p.AtWork, p.IsDone, ClientSecondname = b.Secondname, ClientName = b.Name, ClientPhone = b.Phonenumber })
 				.ToList();
 			OrdersDataGridView.DataSource = orders;
+			OrdersDataGridView.Columns[0].Visible = false;
 		}
 
 		private void OrdersDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -46,6 +47,7 @@ namespace VKR_ComputerService.Forms.AdminForms
 				.ToList();
 			
 			OrderServicesDataGridView.DataSource = orderServices;
+			OrdersDataGridView.Columns[0].Visible = false;
 		}
 
 		private void UpdateButton_Click(object sender, EventArgs e)
@@ -55,6 +57,7 @@ namespace VKR_ComputerService.Forms.AdminForms
 				.Join(_dbContext.Clients, p => p.ClientId, b => b.Id, (p, b) => new { p.Id, EmployeeSecondname = p.Secondname, EmployeeName = p.Name, EmployeePhone = p.Phone, p.Note, p.CreatedData, p.StartData, p.AtWork, p.IsDone, ClientSecondname = b.Secondname, ClientName = b.Name, ClientPhone = b.Phonenumber })
 				.ToList();
 			OrdersDataGridView.DataSource = orders;
+			OrdersDataGridView.Columns[0].Visible = false;
 		}
 
 		private void SearchButton_Click(object sender, EventArgs e)
@@ -65,6 +68,7 @@ namespace VKR_ComputerService.Forms.AdminForms
 				.Where(p=> p.EmployeeSecondname.Contains(SearchTextBox.Text) || p.EmployeeName.Contains(SearchTextBox.Text) || p.EmployeePhone.Contains(SearchTextBox.Text) || p.ClientSecondname.Contains(SearchTextBox.Text) || p.ClientName.Contains(SearchTextBox.Text) || p.ClientPhone.Contains(SearchTextBox.Text) || p.IsDone == IsDoneCheckBox.Checked && p.AtWork == AtWorkCheckBox.Checked)
 				.ToList();
 			OrdersDataGridView.DataSource = orders;
+			OrdersDataGridView.Columns[0].Visible = false;
 		}
 	}
 }

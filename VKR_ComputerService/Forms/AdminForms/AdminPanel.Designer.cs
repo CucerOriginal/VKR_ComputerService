@@ -37,6 +37,7 @@
 			this.SearchTextBox = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.SearchButton = new System.Windows.Forms.Button();
+			this.ServicePanelOpenButton = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.OrdersAtWorkDataGridView)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -128,11 +129,22 @@
 			this.SearchButton.UseVisualStyleBackColor = true;
 			this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
 			// 
+			// ServicePanelOpenButton
+			// 
+			this.ServicePanelOpenButton.Location = new System.Drawing.Point(25, 440);
+			this.ServicePanelOpenButton.Name = "ServicePanelOpenButton";
+			this.ServicePanelOpenButton.Size = new System.Drawing.Size(142, 29);
+			this.ServicePanelOpenButton.TabIndex = 9;
+			this.ServicePanelOpenButton.Text = "Услуги";
+			this.ServicePanelOpenButton.UseVisualStyleBackColor = true;
+			this.ServicePanelOpenButton.Click += new System.EventHandler(this.ServicePanelOpenButton_Click);
+			// 
 			// AdminPanel
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1043, 605);
+			this.Controls.Add(this.ServicePanelOpenButton);
 			this.Controls.Add(this.SearchButton);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.SearchTextBox);
@@ -162,5 +174,6 @@
 		private TextBox SearchTextBox;
 		private Label label2;
 		private Button SearchButton;
+		private Button ServicePanelOpenButton;
 	}
 }

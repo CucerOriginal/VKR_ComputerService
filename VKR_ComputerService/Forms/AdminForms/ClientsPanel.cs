@@ -28,6 +28,7 @@ namespace VKR_ComputerService.Forms.AdminForms
 			var clients = _dbContext.Clients.ToArray();
 
 			ClientsDataGridView.DataSource = clients;
+			ClientsDataGridView.Columns[0].Visible = false;
 		}
 
 		private void AddOrderButton_Click(object sender, EventArgs e)
@@ -58,6 +59,7 @@ namespace VKR_ComputerService.Forms.AdminForms
 				.ToArray();
 
 			ClientsDataGridView.DataSource = clients;
+			ClientsDataGridView.Columns[0].Visible = false;
 		}
 
 		private void UpdateButton_Click(object sender, EventArgs e)
@@ -65,6 +67,7 @@ namespace VKR_ComputerService.Forms.AdminForms
 			var clients = _dbContext.Clients.ToArray();
 
 			ClientsDataGridView.DataSource = clients;
+			ClientsDataGridView.Columns[0].Visible = false;
 		}
 	}
 }
