@@ -36,7 +36,8 @@ namespace VKR_ComputerService.Forms.AdminForms
 			NoteTextBox.Size = new Size(200, 200);
 
 			var employees = _dbContext.ApplicationUsers
-				.Join(_dbContext.Roles, a => a.RoleId, b => b.Id, (a, b) => new { a.Id, a.Secondname, a.Name, a.Middlename, b.RoleName, a.Phone, a.Password })
+				.Join(_dbContext.Roles, a => a.RoleId, b => b.Id, (a, b) => new { a.Id, a.Secondname, a.Name, a.Middlename, b.RoleName, a.Phone })
+				.Where(x => x.RoleName != "Admin")
 				.ToList();
 
 			EmployeeDataGridView.DataSource = employees;

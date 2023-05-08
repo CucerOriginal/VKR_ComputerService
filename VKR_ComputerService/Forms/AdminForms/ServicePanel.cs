@@ -16,6 +16,8 @@ namespace VKR_ComputerService.Forms.AdminForms
 	{
 		private ServiceDbContext _dbContext;
 
+		private int _selectedService;
+
 		public ServicePanel()
 		{
 			_dbContext = new ServiceDbContext();
@@ -74,6 +76,42 @@ namespace VKR_ComputerService.Forms.AdminForms
 		private void SaveButton_Click(object sender, EventArgs e)
 		{
 			_dbContext.SaveChanges();
+		}
+
+		private void DeleteButton_Click(object sender, EventArgs e)
+		{
+			if (_selectedService == 0)
+			{
+				MessageBox.Show("Услуга не выбрана");
+				return;
+			}
+
+			var service = _dbContext.Services.FirstOrDefault(p => p.Id == _selectedService);
+
+			if (service == null)
+			{
+				MessageBox.Show("Услуга с таким Id не существует");
+				return;
+			}
+
+			_dbContext.Services.Remove(service);
+			_dbContext.SaveChanges();
+
+			MessageBox.Show("Услуга успешно удалена");
+
+			ShowServicesOnDataGrid();
+		}
+
+		private void ServicesDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+		{
+			try
+			{
+				_selectedService = (int)ServicesDataGridView.Rows[e.RowIndex].Cells[0].Value;
+			}
+			catch (Exception ex)
+			{
+
+			}
 		}
 	}
 }

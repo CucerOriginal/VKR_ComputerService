@@ -35,6 +35,7 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.SaveButton = new System.Windows.Forms.Button();
+			this.DeleteButton = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.ServicesDataGridView)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -47,6 +48,7 @@
 			this.ServicesDataGridView.RowTemplate.Height = 29;
 			this.ServicesDataGridView.Size = new System.Drawing.Size(681, 335);
 			this.ServicesDataGridView.TabIndex = 0;
+			this.ServicesDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ServicesDataGridView_CellMouseClick);
 			// 
 			// AddServiceNameTextBox
 			// 
@@ -92,7 +94,7 @@
 			// 
 			// SaveButton
 			// 
-			this.SaveButton.Location = new System.Drawing.Point(799, 285);
+			this.SaveButton.Location = new System.Drawing.Point(799, 183);
 			this.SaveButton.Name = "SaveButton";
 			this.SaveButton.Size = new System.Drawing.Size(94, 29);
 			this.SaveButton.TabIndex = 7;
@@ -100,11 +102,22 @@
 			this.SaveButton.UseVisualStyleBackColor = true;
 			this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
 			// 
+			// DeleteButton
+			// 
+			this.DeleteButton.Location = new System.Drawing.Point(799, 233);
+			this.DeleteButton.Name = "DeleteButton";
+			this.DeleteButton.Size = new System.Drawing.Size(94, 29);
+			this.DeleteButton.TabIndex = 8;
+			this.DeleteButton.Text = "Удалить";
+			this.DeleteButton.UseVisualStyleBackColor = true;
+			this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+			// 
 			// ServicePanel
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(905, 555);
+			this.Controls.Add(this.DeleteButton);
 			this.Controls.Add(this.SaveButton);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
@@ -130,5 +143,6 @@
 		private Label label1;
 		private Label label2;
 		private Button SaveButton;
+		private Button DeleteButton;
 	}
 }

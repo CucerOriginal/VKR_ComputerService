@@ -53,8 +53,8 @@ namespace VKR_ComputerService.Forms
 
 			var ordersIsDone = _dbContext.Orders
 				.Where(p => p.ApplicationUserId == _userId)
-				.Join(_dbContext.ApplicationUsers, p => p.ApplicationUserId, b => b.Id, (p, b) => new { p.Id, p.CreatedData, p.StartData, p.AtWork, p.IsDone, p.ClientId, p.Note })
-				.Join(_dbContext.Clients, p => p.ClientId, b => b.Id, (p, b) => new { p.Id, p.Note, p.CreatedData, p.StartData, p.AtWork, p.IsDone, ClientSecondname = b.Secondname, ClientName = b.Name, ClientPhone = b.Phonenumber })
+				.Join(_dbContext.ApplicationUsers, p => p.ApplicationUserId, b => b.Id, (p, b) => new { p.Id, p.CreatedData, p.StartData, p.EndData, p.AtWork, p.IsDone, p.ClientId, p.Note })
+				.Join(_dbContext.Clients, p => p.ClientId, b => b.Id, (p, b) => new { p.Id, p.Note, p.CreatedData, p.StartData, p.EndData, p.AtWork, p.IsDone, ClientSecondname = b.Secondname, ClientName = b.Name, ClientPhone = b.Phonenumber })
 				.Where(p => p.IsDone == true && p.AtWork == false)
 				.ToList();
 
@@ -95,6 +95,7 @@ namespace VKR_ComputerService.Forms
 			}
 
 			order.AtWork = true;
+			order.StartData = DateTime.UtcNow;
 			order.IsDone = false;
 
 			_dbContext.SaveChanges();
@@ -161,6 +162,7 @@ namespace VKR_ComputerService.Forms
 			}
 
 			order.AtWork = false;
+			order.EndData = DateTime.UtcNow;
 			order.IsDone = true;
 
 			_dbContext.SaveChanges();

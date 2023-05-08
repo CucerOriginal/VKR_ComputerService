@@ -36,6 +36,7 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.SearchButton = new System.Windows.Forms.Button();
 			this.UpdateButton = new System.Windows.Forms.Button();
+			this.ChangeButton = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.ClientsDataGridView)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -116,11 +117,22 @@
 			this.UpdateButton.UseVisualStyleBackColor = true;
 			this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
 			// 
+			// ChangeButton
+			// 
+			this.ChangeButton.Location = new System.Drawing.Point(747, 253);
+			this.ChangeButton.Name = "ChangeButton";
+			this.ChangeButton.Size = new System.Drawing.Size(150, 29);
+			this.ChangeButton.TabIndex = 8;
+			this.ChangeButton.Text = "Изменить";
+			this.ChangeButton.UseVisualStyleBackColor = true;
+			this.ChangeButton.Click += new System.EventHandler(this.ChangeButton_Click);
+			// 
 			// ClientsPanel
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(921, 555);
+			this.Controls.Add(this.ChangeButton);
 			this.Controls.Add(this.UpdateButton);
 			this.Controls.Add(this.SearchButton);
 			this.Controls.Add(this.label2);
@@ -148,5 +160,6 @@
 		private Label label2;
 		private Button SearchButton;
 		private Button UpdateButton;
+		private Button ChangeButton;
 	}
 }

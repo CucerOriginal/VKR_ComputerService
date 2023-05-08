@@ -16,6 +16,21 @@ namespace VKR_ComputerService.Forms.AdminForms
 	{
 		private ServiceDbContext _dbContext;
 
+		private ApplicationUser _userToChange;
+
+		public UserAddPanel(int id) : this()
+		{
+			_userToChange = _dbContext.ApplicationUsers.FirstOrDefault(p => p.Id == id);
+
+			SecondnameTextBox.Text = _userToChange.Secondname;
+			NameTextBox.Text = _userToChange.Name;
+			MiddlenameTextBox.Text = _userToChange.Middlename;
+			PhoneTextBox.Text = _userToChange.Phone;
+			PasswordTextBox.Text = _userToChange.Password;
+
+			AddUserButton.Text = "Изменить";
+		}
+
 		public UserAddPanel()
 		{
 			_dbContext = new ServiceDbContext();
@@ -24,6 +39,17 @@ namespace VKR_ComputerService.Forms.AdminForms
 
 		private void AddUserButton_Click(object sender, EventArgs e)
 		{
+			if (_userToChange != null)
+			{
+				ChangeUserData();
+
+				MessageBox.Show("Данные успешно изменены");
+
+				this.Close();
+
+				return;
+			}
+
 			if (_dbContext.ApplicationUsers.FirstOrDefault(p => p.Phone == PhoneTextBox.Text) != null)
 			{
 				MessageBox.Show("Пользователь с таким номером уже существует");
@@ -47,6 +73,17 @@ namespace VKR_ComputerService.Forms.AdminForms
 			MessageBox.Show("Пользователь успешно добавлен");
 
 			this.Close();
+		}
+
+		private void ChangeUserData()
+		{
+			_userToChange.Secondname = SecondnameTextBox.Text;
+			_userToChange.Name = NameTextBox.Text;
+			_userToChange.Middlename = MiddlenameTextBox.Text;
+			_userToChange.Phone = PhoneTextBox.Text;
+			_userToChange.Password = PasswordTextBox.Text;
+
+			_dbContext.SaveChanges();
 		}
 	}
 }

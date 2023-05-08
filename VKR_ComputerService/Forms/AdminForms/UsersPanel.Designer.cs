@@ -34,6 +34,8 @@
 			this.UpdateButton = new System.Windows.Forms.Button();
 			this.SearchButton = new System.Windows.Forms.Button();
 			this.SearchTextBox = new System.Windows.Forms.TextBox();
+			this.DeleteUserButton = new System.Windows.Forms.Button();
+			this.UpdateDataButton = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -46,6 +48,7 @@
 			this.UsersDataGridView.RowTemplate.Height = 29;
 			this.UsersDataGridView.Size = new System.Drawing.Size(665, 286);
 			this.UsersDataGridView.TabIndex = 0;
+			this.UsersDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.UsersDataGridView_CellMouseClick);
 			// 
 			// AddUserButton
 			// 
@@ -94,11 +97,33 @@
 			this.SearchTextBox.TabIndex = 5;
 			this.SearchTextBox.Text = "Поиск";
 			// 
+			// DeleteUserButton
+			// 
+			this.DeleteUserButton.Location = new System.Drawing.Point(765, 200);
+			this.DeleteUserButton.Name = "DeleteUserButton";
+			this.DeleteUserButton.Size = new System.Drawing.Size(185, 29);
+			this.DeleteUserButton.TabIndex = 6;
+			this.DeleteUserButton.Text = "Удалить пользователя";
+			this.DeleteUserButton.UseVisualStyleBackColor = true;
+			this.DeleteUserButton.Click += new System.EventHandler(this.DeleteUserButton_Click);
+			// 
+			// UpdateDataButton
+			// 
+			this.UpdateDataButton.Location = new System.Drawing.Point(765, 276);
+			this.UpdateDataButton.Name = "UpdateDataButton";
+			this.UpdateDataButton.Size = new System.Drawing.Size(185, 29);
+			this.UpdateDataButton.TabIndex = 7;
+			this.UpdateDataButton.Text = "Изменить";
+			this.UpdateDataButton.UseVisualStyleBackColor = true;
+			this.UpdateDataButton.Click += new System.EventHandler(this.UpdateDataButton_Click);
+			// 
 			// UsersPanel
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(962, 506);
+			this.Controls.Add(this.UpdateDataButton);
+			this.Controls.Add(this.DeleteUserButton);
 			this.Controls.Add(this.SearchTextBox);
 			this.Controls.Add(this.SearchButton);
 			this.Controls.Add(this.UpdateButton);
@@ -122,5 +147,7 @@
 		private Button UpdateButton;
 		private Button SearchButton;
 		private TextBox SearchTextBox;
+		private Button DeleteUserButton;
+		private Button UpdateDataButton;
 	}
 }

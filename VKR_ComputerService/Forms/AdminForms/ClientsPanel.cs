@@ -25,10 +25,7 @@ namespace VKR_ComputerService.Forms.AdminForms
 
 		private void ClientPanel_Load(object sender, EventArgs e)
 		{
-			var clients = _dbContext.Clients.ToArray();
-
-			ClientsDataGridView.DataSource = clients;
-			ClientsDataGridView.Columns[0].Visible = false;
+			ShowClientsOnDataGrid();
 		}
 
 		private void AddOrderButton_Click(object sender, EventArgs e)
@@ -49,7 +46,22 @@ namespace VKR_ComputerService.Forms.AdminForms
 
 		private void ClientsDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
 		{
-			_selectedClientId = (int)ClientsDataGridView.Rows[e.RowIndex].Cells[0].Value;
+			try
+			{
+				_selectedClientId = (int)ClientsDataGridView.Rows[e.RowIndex].Cells[0].Value;
+			}
+			catch (Exception ex)
+			{
+
+			}
+		}
+
+		private void ShowClientsOnDataGrid()
+		{
+			var clients = _dbContext.Clients.ToArray();
+
+			ClientsDataGridView.DataSource = clients;
+			ClientsDataGridView.Columns[0].Visible = false;
 		}
 
 		private void SearchButton_Click(object sender, EventArgs e)
@@ -64,10 +76,21 @@ namespace VKR_ComputerService.Forms.AdminForms
 
 		private void UpdateButton_Click(object sender, EventArgs e)
 		{
-			var clients = _dbContext.Clients.ToArray();
+			ShowClientsOnDataGrid();
+		}
 
-			ClientsDataGridView.DataSource = clients;
-			ClientsDataGridView.Columns[0].Visible = false;
+		private void ChangeButton_Click(object sender, EventArgs e)
+		{
+			if (_selectedClientId == 0)
+			{
+				MessageBox.Show("Клиент не выбран");
+				return;
+			}
+
+			new UserAddPanel(_selectedClientId).ShowDialog();
+			_dbContext = new ServiceDbContext();
+
+			ShowClientsOnDataGrid();
 		}
 	}
 }
