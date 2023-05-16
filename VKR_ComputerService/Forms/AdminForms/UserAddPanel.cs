@@ -12,78 +12,78 @@ using VKR_ComputerService.DbContextData;
 
 namespace VKR_ComputerService.Forms.AdminForms
 {
-	public partial class UserAddPanel : Form
-	{
-		private ServiceDbContext _dbContext;
+    public partial class UserAddPanel : Form
+    {
+        private ServiceDbContext _dbContext;
 
-		private ApplicationUser _userToChange;
+        private ApplicationUser _userToChange;
 
-		public UserAddPanel(int id) : this()
-		{
-			_userToChange = _dbContext.ApplicationUsers.FirstOrDefault(p => p.Id == id);
+        public UserAddPanel(int id) : this()
+        {
+            _userToChange = _dbContext.ApplicationUsers.FirstOrDefault(p => p.Id == id);
 
-			SecondnameTextBox.Text = _userToChange.Secondname;
-			NameTextBox.Text = _userToChange.Name;
-			MiddlenameTextBox.Text = _userToChange.Middlename;
-			PhoneTextBox.Text = _userToChange.Phone;
-			PasswordTextBox.Text = _userToChange.Password;
+            SecondnameTextBox.Text = _userToChange.Secondname;
+            NameTextBox.Text = _userToChange.Name;
+            MiddlenameTextBox.Text = _userToChange.Middlename;
+            PhoneTextBox.Text = _userToChange.Phone;
+            PasswordTextBox.Text = _userToChange.Password;
 
-			AddUserButton.Text = "Изменить";
-		}
+            materialButtonUserAdd.Text = "Изменить";
+        }
 
-		public UserAddPanel()
-		{
-			_dbContext = new ServiceDbContext();
-			InitializeComponent();
-		}
+        public UserAddPanel()
+        {
+            _dbContext = new ServiceDbContext();
+            InitializeComponent();
+        }
 
-		private void AddUserButton_Click(object sender, EventArgs e)
-		{
-			if (_userToChange != null)
-			{
-				ChangeUserData();
+        private void AddUserButton_Click(object sender, EventArgs e)
+        {
+            if (_userToChange != null)
+            {
+                ChangeUserData();
 
-				MessageBox.Show("Данные успешно изменены");
+                MessageBox.Show("Данные успешно изменены");
 
-				this.Close();
+                this.Close();
 
-				return;
-			}
+                return;
+            }
 
-			if (_dbContext.ApplicationUsers.FirstOrDefault(p => p.Phone == PhoneTextBox.Text) != null)
-			{
-				MessageBox.Show("Пользователь с таким номером уже существует");
-				return;
-			}
+            if (_dbContext.ApplicationUsers.FirstOrDefault(p => p.Phone == PhoneTextBox.Text) != null)
+            {
+                MessageBox.Show("Пользователь с таким номером уже существует");
+                return;
+            }
 
-			ApplicationUser applicationUser = new ApplicationUser
-			{
-				Secondname = SecondnameTextBox.Text,
-				Name = NameTextBox.Text,
-				Middlename = MiddlenameTextBox.Text,
-				Phone = PhoneTextBox.Text,
-				Password = PasswordTextBox.Text,
-				RoleId = 2
-			};
+            ApplicationUser applicationUser = new ApplicationUser
+            {
+                Secondname = SecondnameTextBox.Text,
+                Name = NameTextBox.Text,
+                Middlename = MiddlenameTextBox.Text,
+                Phone = PhoneTextBox.Text,
+                Password = PasswordTextBox.Text,
+                RoleId = 2
+            };
 
-			_dbContext.ApplicationUsers.Add(applicationUser);
+            _dbContext.ApplicationUsers.Add(applicationUser);
 
-			_dbContext.SaveChanges();
+            _dbContext.SaveChanges();
 
-			MessageBox.Show("Пользователь успешно добавлен");
+            MessageBox.Show("Пользователь успешно добавлен");
 
-			this.Close();
-		}
+            this.Close();
+        }
 
-		private void ChangeUserData()
-		{
-			_userToChange.Secondname = SecondnameTextBox.Text;
-			_userToChange.Name = NameTextBox.Text;
-			_userToChange.Middlename = MiddlenameTextBox.Text;
-			_userToChange.Phone = PhoneTextBox.Text;
-			_userToChange.Password = PasswordTextBox.Text;
+        private void ChangeUserData()
+        {
+            _userToChange.Secondname = SecondnameTextBox.Text;
+            _userToChange.Name = NameTextBox.Text;
+            _userToChange.Middlename = MiddlenameTextBox.Text;
+            _userToChange.Phone = PhoneTextBox.Text;
+            _userToChange.Password = PasswordTextBox.Text;
 
-			_dbContext.SaveChanges();
-		}
-	}
+            _dbContext.SaveChanges();
+        }
+    }
 }

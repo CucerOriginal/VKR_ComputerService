@@ -1,4 +1,5 @@
 using VKR_ComputerService.Forms;
+using VKR_ComputerService.Forms.AdminForms;
 
 namespace VKR_ComputerService
 {
@@ -13,7 +14,7 @@ namespace VKR_ComputerService
 			// To customize application configuration such as set high DPI settings or default font,
 			// see https://aka.ms/applicationconfiguration.
 			ApplicationConfiguration.Initialize();
-			Application.Run(new AdminPanel());
+			Application.Run(new MenuItem());
 		}
 	}
 }
