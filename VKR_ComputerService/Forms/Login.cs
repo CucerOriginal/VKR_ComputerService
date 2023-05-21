@@ -12,39 +12,41 @@ using VKR_ComputerService.Forms;
 
 namespace VKR_ComputerService
 {
-	public partial class Login : Form
-	{
-		private ServiceDbContext _dbContext;
+    public partial class Login : Form
+    {
+        private ServiceDbContext _dbContext;
 
-		public Login()
-		{
-			_dbContext = new ServiceDbContext();
-			InitializeComponent();
-		}
+        public Login()
+        {
+            _dbContext = new ServiceDbContext();
+            InitializeComponent();
+        }
 
-		private void LogOnButton_Click(object sender, EventArgs e)
-		{
-			var user = _dbContext.ApplicationUsers.FirstOrDefault(p => p.Phone == LoginTextBox.Text);
-			if (user == null)
-			{
-				MessageBox.Show("Такого пользователя не существует");
-				return;
-			}
+        private void LogOnButton_Click(object sender, EventArgs e)
+        {
+            var user = _dbContext.ApplicationUsers.FirstOrDefault(p => p.Phone == LoginTextBox.Text);
+            if (user == null)
+            {
+                MessageBox.Show("Такого пользователя не существует");
+                return;
+            }
 
-			if (user.Password != PasswordTextBox.Text)
-			{
-				MessageBox.Show("Неправильный пароль");
-				return;
-			}
+            if (user.Password != PasswordTextBox.Text)
+            {
+                MessageBox.Show("Неправильный пароль");
+                return;
+            }
 
-			_ = user.RoleId == 1
-				? new AdminPanel().ShowDialog()
-				: new EmployeePanel(user.Id).ShowDialog();
-		}
+            _ = user.RoleId == 1
+                ? new MenuItem().ShowDialog()
+                : new EmployeePanel(user.Id).ShowDialog();
 
-		private void Login_Load(object sender, EventArgs e)
-		{
+            this.Close();
+        }
 
-		}
-	}
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
 }

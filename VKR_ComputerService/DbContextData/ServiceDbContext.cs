@@ -17,7 +17,7 @@ namespace VKR_ComputerService.DbContextData
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=ComputerService;Username=postgres;Password=q1w2e3");
+			optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=ComputerService;Username=postgres;Password=postgres");
 		}
 
 		public DbSet<ApplicationUser>? ApplicationUsers { get; set; }

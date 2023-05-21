@@ -1,200 +1,259 @@
 ﻿namespace VKR_ComputerService.Forms
 {
-	partial class EmployeePanel
-	{
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+    partial class EmployeePanel
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-		protected override void Dispose(bool disposing)
-		{
-			if (disposing && (components != null))
-			{
-				components.Dispose();
-			}
-			base.Dispose(disposing);
-		}
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-		#region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
-			this.OrdersInPlanDataGridView = new System.Windows.Forms.DataGridView();
-			this.OrdersAtWorkDataGridView = new System.Windows.Forms.DataGridView();
-			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.OrderServicesDataGridView = new System.Windows.Forms.DataGridView();
-			this.label3 = new System.Windows.Forms.Label();
-			this.MoveToAtWorkButton = new System.Windows.Forms.Button();
-			this.MoveToPlanButton = new System.Windows.Forms.Button();
-			this.MoveToDoneButton = new System.Windows.Forms.Button();
-			this.OrdersIsDoneDataGridView = new System.Windows.Forms.DataGridView();
-			this.label4 = new System.Windows.Forms.Label();
-			((System.ComponentModel.ISupportInitialize)(this.OrdersInPlanDataGridView)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.OrdersAtWorkDataGridView)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.OrderServicesDataGridView)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.OrdersIsDoneDataGridView)).BeginInit();
-			this.SuspendLayout();
-			// 
-			// OrdersInPlanDataGridView
-			// 
-			this.OrdersInPlanDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.OrdersInPlanDataGridView.Location = new System.Drawing.Point(24, 93);
-			this.OrdersInPlanDataGridView.Name = "OrdersInPlanDataGridView";
-			this.OrdersInPlanDataGridView.RowHeadersWidth = 51;
-			this.OrdersInPlanDataGridView.RowTemplate.Height = 29;
-			this.OrdersInPlanDataGridView.Size = new System.Drawing.Size(509, 312);
-			this.OrdersInPlanDataGridView.TabIndex = 0;
-			this.OrdersInPlanDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.OrdersInPlanDataGridView_CellMouseClick);
-			// 
-			// OrdersAtWorkDataGridView
-			// 
-			this.OrdersAtWorkDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.OrdersAtWorkDataGridView.Location = new System.Drawing.Point(802, 93);
-			this.OrdersAtWorkDataGridView.Name = "OrdersAtWorkDataGridView";
-			this.OrdersAtWorkDataGridView.RowHeadersWidth = 51;
-			this.OrdersAtWorkDataGridView.RowTemplate.Height = 29;
-			this.OrdersAtWorkDataGridView.Size = new System.Drawing.Size(509, 312);
-			this.OrdersAtWorkDataGridView.TabIndex = 1;
-			this.OrdersAtWorkDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.OrdersAtWorkDataGridView_CellMouseClick);
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(24, 70);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(103, 20);
-			this.label1.TabIndex = 2;
-			this.label1.Text = "План заказов";
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(802, 70);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(129, 20);
-			this.label2.TabIndex = 3;
-			this.label2.Text = "Активные заказы";
-			// 
-			// OrderServicesDataGridView
-			// 
-			this.OrderServicesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.OrderServicesDataGridView.Location = new System.Drawing.Point(24, 534);
-			this.OrderServicesDataGridView.Name = "OrderServicesDataGridView";
-			this.OrderServicesDataGridView.RowHeadersWidth = 51;
-			this.OrderServicesDataGridView.RowTemplate.Height = 29;
-			this.OrderServicesDataGridView.Size = new System.Drawing.Size(509, 312);
-			this.OrderServicesDataGridView.TabIndex = 4;
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(24, 511);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(104, 20);
-			this.label3.TabIndex = 6;
-			this.label3.Text = "Услуги заказа";
-			// 
-			// MoveToAtWorkButton
-			// 
-			this.MoveToAtWorkButton.Location = new System.Drawing.Point(565, 143);
-			this.MoveToAtWorkButton.Name = "MoveToAtWorkButton";
-			this.MoveToAtWorkButton.Size = new System.Drawing.Size(213, 29);
-			this.MoveToAtWorkButton.TabIndex = 7;
-			this.MoveToAtWorkButton.Text = "Перевести в активные =>";
-			this.MoveToAtWorkButton.UseVisualStyleBackColor = true;
-			this.MoveToAtWorkButton.Click += new System.EventHandler(this.MoveToAtWorkButton_Click);
-			// 
-			// MoveToPlanButton
-			// 
-			this.MoveToPlanButton.Location = new System.Drawing.Point(565, 290);
-			this.MoveToPlanButton.Name = "MoveToPlanButton";
-			this.MoveToPlanButton.Size = new System.Drawing.Size(213, 29);
-			this.MoveToPlanButton.TabIndex = 8;
-			this.MoveToPlanButton.Text = "<= Перевести в план";
-			this.MoveToPlanButton.UseVisualStyleBackColor = true;
-			this.MoveToPlanButton.Click += new System.EventHandler(this.MoveToPlanButton_Click);
-			// 
-			// MoveToDoneButton
-			// 
-			this.MoveToDoneButton.Location = new System.Drawing.Point(1217, 432);
-			this.MoveToDoneButton.Name = "MoveToDoneButton";
-			this.MoveToDoneButton.Size = new System.Drawing.Size(94, 29);
-			this.MoveToDoneButton.TabIndex = 9;
-			this.MoveToDoneButton.Text = "Завершить";
-			this.MoveToDoneButton.UseVisualStyleBackColor = true;
-			this.MoveToDoneButton.Click += new System.EventHandler(this.MoveToDoneButton_Click);
-			// 
-			// OrdersIsDoneDataGridView
-			// 
-			this.OrdersIsDoneDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.OrdersIsDoneDataGridView.Location = new System.Drawing.Point(802, 534);
-			this.OrdersIsDoneDataGridView.Name = "OrdersIsDoneDataGridView";
-			this.OrdersIsDoneDataGridView.RowHeadersWidth = 51;
-			this.OrdersIsDoneDataGridView.RowTemplate.Height = 29;
-			this.OrdersIsDoneDataGridView.Size = new System.Drawing.Size(509, 312);
-			this.OrdersIsDoneDataGridView.TabIndex = 10;
-			this.OrdersIsDoneDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.OrdersIsDoneDataGridView_CellMouseClick);
-			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(802, 511);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(107, 20);
-			this.label4.TabIndex = 11;
-			this.label4.Text = "Завершенные";
-			this.label4.Click += new System.EventHandler(this.label4_Click);
-			// 
-			// EmployeePanel
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1341, 887);
-			this.Controls.Add(this.label4);
-			this.Controls.Add(this.OrdersIsDoneDataGridView);
-			this.Controls.Add(this.MoveToDoneButton);
-			this.Controls.Add(this.MoveToPlanButton);
-			this.Controls.Add(this.MoveToAtWorkButton);
-			this.Controls.Add(this.label3);
-			this.Controls.Add(this.OrderServicesDataGridView);
-			this.Controls.Add(this.label2);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this.OrdersAtWorkDataGridView);
-			this.Controls.Add(this.OrdersInPlanDataGridView);
-			this.Name = "EmployeePanel";
-			this.Text = "EmployeePanel";
-			this.Load += new System.EventHandler(this.EmployeePanel_Load);
-			((System.ComponentModel.ISupportInitialize)(this.OrdersInPlanDataGridView)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.OrdersAtWorkDataGridView)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.OrderServicesDataGridView)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.OrdersIsDoneDataGridView)).EndInit();
-			this.ResumeLayout(false);
-			this.PerformLayout();
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            OrdersInPlanDataGridView = new DataGridView();
+            OrdersAtWorkDataGridView = new DataGridView();
+            OrderServicesDataGridView = new DataGridView();
+            OrdersIsDoneDataGridView = new DataGridView();
+            materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            materialButton2 = new MaterialSkin.Controls.MaterialButton();
+            materialButton3 = new MaterialSkin.Controls.MaterialButton();
+            ((System.ComponentModel.ISupportInitialize)OrdersInPlanDataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)OrdersAtWorkDataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)OrderServicesDataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)OrdersIsDoneDataGridView).BeginInit();
+            SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Oldtimer", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.MenuHighlight;
+            label1.Location = new Point(12, 18);
+            label1.Name = "label1";
+            label1.Size = new Size(102, 15);
+            label1.TabIndex = 2;
+            label1.Text = "План заказов";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Oldtimer", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.MenuHighlight;
+            label2.Location = new Point(684, 19);
+            label2.Name = "label2";
+            label2.Size = new Size(132, 15);
+            label2.TabIndex = 3;
+            label2.Text = "Активные заказы";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Oldtimer", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.MenuHighlight;
+            label3.Location = new Point(12, 331);
+            label3.Name = "label3";
+            label3.Size = new Size(108, 15);
+            label3.TabIndex = 6;
+            label3.Text = "Услуги заказа";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Oldtimer", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.MenuHighlight;
+            label4.Location = new Point(644, 331);
+            label4.Name = "label4";
+            label4.Size = new Size(101, 15);
+            label4.TabIndex = 11;
+            label4.Text = "Завершенные";
+            label4.Click += label4_Click;
+            // 
+            // OrdersInPlanDataGridView
+            // 
+            OrdersInPlanDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            OrdersInPlanDataGridView.BackgroundColor = Color.White;
+            OrdersInPlanDataGridView.ColumnHeadersHeight = 35;
+            OrdersInPlanDataGridView.Location = new Point(12, 36);
+            OrdersInPlanDataGridView.Margin = new Padding(3, 2, 3, 2);
+            OrdersInPlanDataGridView.Name = "OrdersInPlanDataGridView";
+            OrdersInPlanDataGridView.RowHeadersVisible = false;
+            OrdersInPlanDataGridView.RowHeadersWidth = 51;
+            OrdersInPlanDataGridView.RowTemplate.Height = 35;
+            OrdersInPlanDataGridView.Size = new Size(520, 250);
+            OrdersInPlanDataGridView.TabIndex = 12;
+            OrdersInPlanDataGridView.CellMouseClick += OrdersInPlanDataGridView_CellMouseClick;
+            // 
+            // OrdersAtWorkDataGridView
+            // 
+            OrdersAtWorkDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            OrdersAtWorkDataGridView.BackgroundColor = Color.White;
+            OrdersAtWorkDataGridView.ColumnHeadersHeight = 35;
+            OrdersAtWorkDataGridView.Location = new Point(644, 36);
+            OrdersAtWorkDataGridView.Margin = new Padding(3, 2, 3, 2);
+            OrdersAtWorkDataGridView.Name = "OrdersAtWorkDataGridView";
+            OrdersAtWorkDataGridView.RowHeadersVisible = false;
+            OrdersAtWorkDataGridView.RowHeadersWidth = 51;
+            OrdersAtWorkDataGridView.RowTemplate.Height = 35;
+            OrdersAtWorkDataGridView.Size = new Size(517, 250);
+            OrdersAtWorkDataGridView.TabIndex = 13;
+            OrdersAtWorkDataGridView.CellMouseClick += OrdersAtWorkDataGridView_CellMouseClick;
+            // 
+            // OrderServicesDataGridView
+            // 
+            OrderServicesDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            OrderServicesDataGridView.BackgroundColor = Color.White;
+            OrderServicesDataGridView.ColumnHeadersHeight = 35;
+            OrderServicesDataGridView.Location = new Point(12, 348);
+            OrderServicesDataGridView.Margin = new Padding(3, 2, 3, 2);
+            OrderServicesDataGridView.Name = "OrderServicesDataGridView";
+            OrderServicesDataGridView.RowHeadersVisible = false;
+            OrderServicesDataGridView.RowHeadersWidth = 51;
+            OrderServicesDataGridView.RowTemplate.Height = 35;
+            OrderServicesDataGridView.Size = new Size(520, 306);
+            OrderServicesDataGridView.TabIndex = 14;
+            // 
+            // OrdersIsDoneDataGridView
+            // 
+            OrdersIsDoneDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            OrdersIsDoneDataGridView.BackgroundColor = Color.White;
+            OrdersIsDoneDataGridView.ColumnHeadersHeight = 35;
+            OrdersIsDoneDataGridView.Location = new Point(644, 348);
+            OrdersIsDoneDataGridView.Margin = new Padding(3, 2, 3, 2);
+            OrdersIsDoneDataGridView.Name = "OrdersIsDoneDataGridView";
+            OrdersIsDoneDataGridView.RowHeadersVisible = false;
+            OrdersIsDoneDataGridView.RowHeadersWidth = 51;
+            OrdersIsDoneDataGridView.RowTemplate.Height = 35;
+            OrdersIsDoneDataGridView.Size = new Size(520, 306);
+            OrdersIsDoneDataGridView.TabIndex = 15;
+            OrdersIsDoneDataGridView.CellMouseClick += OrdersIsDoneDataGridView_CellMouseClick;
+            // 
+            // materialButton1
+            // 
+            materialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButton1.Depth = 0;
+            materialButton1.HighEmphasis = true;
+            materialButton1.Icon = null;
+            materialButton1.Location = new Point(1051, 294);
+            materialButton1.Margin = new Padding(4, 6, 4, 6);
+            materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton1.Name = "materialButton1";
+            materialButton1.NoAccentTextColor = Color.Empty;
+            materialButton1.Size = new Size(109, 36);
+            materialButton1.TabIndex = 16;
+            materialButton1.Text = "Завершить";
+            materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton1.UseAccentColor = false;
+            materialButton1.UseVisualStyleBackColor = true;
+            materialButton1.Click += MoveToDoneButton_Click;
+            // 
+            // materialButton2
+            // 
+            materialButton2.AutoSize = false;
+            materialButton2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButton2.Depth = 0;
+            materialButton2.FlatStyle = FlatStyle.Popup;
+            materialButton2.HighEmphasis = true;
+            materialButton2.Icon = null;
+            materialButton2.Location = new Point(538, 49);
+            materialButton2.Margin = new Padding(4, 6, 4, 6);
+            materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton2.Name = "materialButton2";
+            materialButton2.NoAccentTextColor = Color.Empty;
+            materialButton2.Size = new Size(99, 52);
+            materialButton2.TabIndex = 17;
+            materialButton2.Text = "Перевести в активные =>";
+            materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton2.UseAccentColor = false;
+            materialButton2.UseVisualStyleBackColor = true;
+            materialButton2.Click += MoveToAtWorkButton_Click;
+            // 
+            // materialButton3
+            // 
+            materialButton3.AutoSize = false;
+            materialButton3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton3.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButton3.Depth = 0;
+            materialButton3.FlatStyle = FlatStyle.Popup;
+            materialButton3.HighEmphasis = true;
+            materialButton3.Icon = null;
+            materialButton3.Location = new Point(539, 204);
+            materialButton3.Margin = new Padding(4, 6, 4, 6);
+            materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton3.Name = "materialButton3";
+            materialButton3.NoAccentTextColor = Color.Empty;
+            materialButton3.Size = new Size(99, 61);
+            materialButton3.TabIndex = 18;
+            materialButton3.Text = "<=  Перевести в план";
+            materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton3.UseAccentColor = false;
+            materialButton3.UseVisualStyleBackColor = true;
+            materialButton3.Click += MoveToPlanButton_Click;
+            // 
+            // EmployeePanel
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(1173, 665);
+            Controls.Add(materialButton3);
+            Controls.Add(materialButton2);
+            Controls.Add(materialButton1);
+            Controls.Add(OrdersIsDoneDataGridView);
+            Controls.Add(OrderServicesDataGridView);
+            Controls.Add(OrdersAtWorkDataGridView);
+            Controls.Add(OrdersInPlanDataGridView);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "EmployeePanel";
+            Text = "EmployeePanel";
+            Load += EmployeePanel_Load;
+            ((System.ComponentModel.ISupportInitialize)OrdersInPlanDataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)OrdersAtWorkDataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)OrderServicesDataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)OrdersIsDoneDataGridView).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
 
-		}
-
-		#endregion
-
-		private DataGridView OrdersInPlanDataGridView;
-		private DataGridView OrdersAtWorkDataGridView;
-		private Label label1;
-		private Label label2;
-		private DataGridView OrderServicesDataGridView;
-		private Label label3;
-		private Button MoveToAtWorkButton;
-		private Button MoveToPlanButton;
-		private Button MoveToDoneButton;
-		private DataGridView OrdersIsDoneDataGridView;
-		private Label label4;
-	}
+        #endregion
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private DataGridView OrdersInPlanDataGridView;
+        private DataGridView OrdersAtWorkDataGridView;
+        private DataGridView OrderServicesDataGridView;
+        private DataGridView OrdersIsDoneDataGridView;
+        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialButton materialButton2;
+        private MaterialSkin.Controls.MaterialButton materialButton3;
+    }
 }

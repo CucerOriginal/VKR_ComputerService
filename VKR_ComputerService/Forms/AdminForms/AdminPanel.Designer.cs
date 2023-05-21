@@ -1,179 +1,193 @@
-﻿namespace VKR_ComputerService.Forms
+﻿namespace VKR_ComputerService.Forms.AdminForms
 {
-	partial class AdminPanel
-	{
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+    partial class AdminPanel
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-		protected override void Dispose(bool disposing)
-		{
-			if (disposing && (components != null))
-			{
-				components.Dispose();
-			}
-			base.Dispose(disposing);
-		}
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-		#region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
-			this.OrdersPanelOpenButton = new System.Windows.Forms.Button();
-			this.UserPanelOpenButton = new System.Windows.Forms.Button();
-			this.CilentsPanelOpenButton = new System.Windows.Forms.Button();
-			this.OrdersAtWorkDataGridView = new System.Windows.Forms.DataGridView();
-			this.label1 = new System.Windows.Forms.Label();
-			this.UpdateOrderDataButton = new System.Windows.Forms.Button();
-			this.SearchTextBox = new System.Windows.Forms.TextBox();
-			this.label2 = new System.Windows.Forms.Label();
-			this.SearchButton = new System.Windows.Forms.Button();
-			this.ServicePanelOpenButton = new System.Windows.Forms.Button();
-			((System.ComponentModel.ISupportInitialize)(this.OrdersAtWorkDataGridView)).BeginInit();
-			this.SuspendLayout();
-			// 
-			// OrdersPanelOpenButton
-			// 
-			this.OrdersPanelOpenButton.Location = new System.Drawing.Point(25, 172);
-			this.OrdersPanelOpenButton.Name = "OrdersPanelOpenButton";
-			this.OrdersPanelOpenButton.Size = new System.Drawing.Size(142, 29);
-			this.OrdersPanelOpenButton.TabIndex = 0;
-			this.OrdersPanelOpenButton.Text = "Заказы";
-			this.OrdersPanelOpenButton.UseVisualStyleBackColor = true;
-			this.OrdersPanelOpenButton.Click += new System.EventHandler(this.OrdersPanelOpenButton_Click);
-			// 
-			// UserPanelOpenButton
-			// 
-			this.UserPanelOpenButton.Location = new System.Drawing.Point(25, 259);
-			this.UserPanelOpenButton.Name = "UserPanelOpenButton";
-			this.UserPanelOpenButton.Size = new System.Drawing.Size(142, 29);
-			this.UserPanelOpenButton.TabIndex = 1;
-			this.UserPanelOpenButton.Text = "Пользователи";
-			this.UserPanelOpenButton.UseVisualStyleBackColor = true;
-			this.UserPanelOpenButton.Click += new System.EventHandler(this.UserPanelOpenButton_Click);
-			// 
-			// CilentsPanelOpenButton
-			// 
-			this.CilentsPanelOpenButton.Location = new System.Drawing.Point(25, 345);
-			this.CilentsPanelOpenButton.Name = "CilentsPanelOpenButton";
-			this.CilentsPanelOpenButton.Size = new System.Drawing.Size(142, 29);
-			this.CilentsPanelOpenButton.TabIndex = 2;
-			this.CilentsPanelOpenButton.Text = "Клиенты";
-			this.CilentsPanelOpenButton.UseVisualStyleBackColor = true;
-			this.CilentsPanelOpenButton.Click += new System.EventHandler(this.CilentsPanelOpenButton_Click);
-			// 
-			// OrdersAtWorkDataGridView
-			// 
-			this.OrdersAtWorkDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.OrdersAtWorkDataGridView.Location = new System.Drawing.Point(404, 145);
-			this.OrdersAtWorkDataGridView.Name = "OrdersAtWorkDataGridView";
-			this.OrdersAtWorkDataGridView.ReadOnly = true;
-			this.OrdersAtWorkDataGridView.RowHeadersWidth = 51;
-			this.OrdersAtWorkDataGridView.RowTemplate.Height = 29;
-			this.OrdersAtWorkDataGridView.Size = new System.Drawing.Size(565, 324);
-			this.OrdersAtWorkDataGridView.TabIndex = 3;
-			this.OrdersAtWorkDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(404, 122);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(123, 20);
-			this.label1.TabIndex = 4;
-			this.label1.Text = "Заказы в работе";
-			// 
-			// UpdateOrderDataButton
-			// 
-			this.UpdateOrderDataButton.Location = new System.Drawing.Point(875, 495);
-			this.UpdateOrderDataButton.Name = "UpdateOrderDataButton";
-			this.UpdateOrderDataButton.Size = new System.Drawing.Size(94, 29);
-			this.UpdateOrderDataButton.TabIndex = 5;
-			this.UpdateOrderDataButton.Text = "Обновить";
-			this.UpdateOrderDataButton.UseVisualStyleBackColor = true;
-			this.UpdateOrderDataButton.Click += new System.EventHandler(this.UpdateOrderDataButton_Click);
-			// 
-			// SearchTextBox
-			// 
-			this.SearchTextBox.Location = new System.Drawing.Point(648, 115);
-			this.SearchTextBox.Name = "SearchTextBox";
-			this.SearchTextBox.Size = new System.Drawing.Size(163, 27);
-			this.SearchTextBox.TabIndex = 6;
-			this.SearchTextBox.Text = "Поиск";
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(592, 118);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(52, 20);
-			this.label2.TabIndex = 7;
-			this.label2.Text = "Поиск";
-			// 
-			// SearchButton
-			// 
-			this.SearchButton.Location = new System.Drawing.Point(858, 113);
-			this.SearchButton.Name = "SearchButton";
-			this.SearchButton.Size = new System.Drawing.Size(94, 29);
-			this.SearchButton.TabIndex = 8;
-			this.SearchButton.Text = "Найти";
-			this.SearchButton.UseVisualStyleBackColor = true;
-			this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
-			// 
-			// ServicePanelOpenButton
-			// 
-			this.ServicePanelOpenButton.Location = new System.Drawing.Point(25, 440);
-			this.ServicePanelOpenButton.Name = "ServicePanelOpenButton";
-			this.ServicePanelOpenButton.Size = new System.Drawing.Size(142, 29);
-			this.ServicePanelOpenButton.TabIndex = 9;
-			this.ServicePanelOpenButton.Text = "Услуги";
-			this.ServicePanelOpenButton.UseVisualStyleBackColor = true;
-			this.ServicePanelOpenButton.Click += new System.EventHandler(this.ServicePanelOpenButton_Click);
-			// 
-			// AdminPanel
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1043, 605);
-			this.Controls.Add(this.ServicePanelOpenButton);
-			this.Controls.Add(this.SearchButton);
-			this.Controls.Add(this.label2);
-			this.Controls.Add(this.SearchTextBox);
-			this.Controls.Add(this.UpdateOrderDataButton);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this.OrdersAtWorkDataGridView);
-			this.Controls.Add(this.CilentsPanelOpenButton);
-			this.Controls.Add(this.UserPanelOpenButton);
-			this.Controls.Add(this.OrdersPanelOpenButton);
-			this.Name = "AdminPanel";
-			this.Text = "AdminPanel";
-			this.Load += new System.EventHandler(this.AdminPanel_Load);
-			((System.ComponentModel.ISupportInitialize)(this.OrdersAtWorkDataGridView)).EndInit();
-			this.ResumeLayout(false);
-			this.PerformLayout();
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            ServicePanelOpenButton = new Button();
+            SearchButton = new Button();
+            label2 = new Label();
+            SearchTextBox = new TextBox();
+            UpdateOrderDataButton = new Button();
+            label1 = new Label();
+            OrdersAtWorkDataGridView = new DataGridView();
+            CilentsPanelOpenButton = new Button();
+            UserPanelOpenButton = new Button();
+            OrdersPanelOpenButton = new Button();
+            button1 = new Button();
+            ((System.ComponentModel.ISupportInitialize)OrdersAtWorkDataGridView).BeginInit();
+            SuspendLayout();
+            // 
+            // ServicePanelOpenButton
+            // 
+            ServicePanelOpenButton.Location = new Point(9, 280);
+            ServicePanelOpenButton.Margin = new Padding(3, 2, 3, 2);
+            ServicePanelOpenButton.Name = "ServicePanelOpenButton";
+            ServicePanelOpenButton.Size = new Size(124, 22);
+            ServicePanelOpenButton.TabIndex = 19;
+            ServicePanelOpenButton.Text = "Услуги";
+            ServicePanelOpenButton.UseVisualStyleBackColor = true;
+            // 
+            // SearchButton
+            // 
+            SearchButton.Location = new Point(516, 33);
+            SearchButton.Margin = new Padding(3, 2, 3, 2);
+            SearchButton.Name = "SearchButton";
+            SearchButton.Size = new Size(82, 22);
+            SearchButton.TabIndex = 18;
+            SearchButton.Text = "Найти";
+            SearchButton.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(318, 38);
+            label2.Name = "label2";
+            label2.Size = new Size(42, 15);
+            label2.TabIndex = 17;
+            label2.Text = "Поиск";
+            // 
+            // SearchTextBox
+            // 
+            SearchTextBox.Location = new Point(367, 36);
+            SearchTextBox.Margin = new Padding(3, 2, 3, 2);
+            SearchTextBox.Name = "SearchTextBox";
+            SearchTextBox.Size = new Size(143, 23);
+            SearchTextBox.TabIndex = 16;
+            SearchTextBox.Text = "Поиск";
+            // 
+            // UpdateOrderDataButton
+            // 
+            UpdateOrderDataButton.Location = new Point(499, 321);
+            UpdateOrderDataButton.Margin = new Padding(3, 2, 3, 2);
+            UpdateOrderDataButton.Name = "UpdateOrderDataButton";
+            UpdateOrderDataButton.Size = new Size(82, 22);
+            UpdateOrderDataButton.TabIndex = 15;
+            UpdateOrderDataButton.Text = "Обновить";
+            UpdateOrderDataButton.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(154, 42);
+            label1.Name = "label1";
+            label1.Size = new Size(96, 15);
+            label1.TabIndex = 14;
+            label1.Text = "Заказы в работе";
+            // 
+            // OrdersAtWorkDataGridView
+            // 
+            OrdersAtWorkDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            OrdersAtWorkDataGridView.Location = new Point(154, 59);
+            OrdersAtWorkDataGridView.Margin = new Padding(3, 2, 3, 2);
+            OrdersAtWorkDataGridView.Name = "OrdersAtWorkDataGridView";
+            OrdersAtWorkDataGridView.ReadOnly = true;
+            OrdersAtWorkDataGridView.RowHeadersWidth = 51;
+            OrdersAtWorkDataGridView.RowTemplate.Height = 29;
+            OrdersAtWorkDataGridView.Size = new Size(427, 243);
+            OrdersAtWorkDataGridView.TabIndex = 13;
+            // 
+            // CilentsPanelOpenButton
+            // 
+            CilentsPanelOpenButton.Location = new Point(9, 209);
+            CilentsPanelOpenButton.Margin = new Padding(3, 2, 3, 2);
+            CilentsPanelOpenButton.Name = "CilentsPanelOpenButton";
+            CilentsPanelOpenButton.Size = new Size(124, 22);
+            CilentsPanelOpenButton.TabIndex = 12;
+            CilentsPanelOpenButton.Text = "Клиенты";
+            CilentsPanelOpenButton.UseVisualStyleBackColor = true;
+            // 
+            // UserPanelOpenButton
+            // 
+            UserPanelOpenButton.Location = new Point(9, 144);
+            UserPanelOpenButton.Margin = new Padding(3, 2, 3, 2);
+            UserPanelOpenButton.Name = "UserPanelOpenButton";
+            UserPanelOpenButton.Size = new Size(124, 22);
+            UserPanelOpenButton.TabIndex = 11;
+            UserPanelOpenButton.Text = "Пользователи";
+            UserPanelOpenButton.UseVisualStyleBackColor = true;
+            // 
+            // OrdersPanelOpenButton
+            // 
+            OrdersPanelOpenButton.Location = new Point(9, 79);
+            OrdersPanelOpenButton.Margin = new Padding(3, 2, 3, 2);
+            OrdersPanelOpenButton.Name = "OrdersPanelOpenButton";
+            OrdersPanelOpenButton.Size = new Size(124, 22);
+            OrdersPanelOpenButton.TabIndex = 10;
+            OrdersPanelOpenButton.Text = "Заказы";
+            OrdersPanelOpenButton.UseVisualStyleBackColor = true;
+            OrdersPanelOpenButton.Click += OrdersPanelOpenButton_Click_1;
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Oldtimer", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(601, 3);
+            button1.Name = "button1";
+            button1.Size = new Size(32, 27);
+            button1.TabIndex = 20;
+            button1.Text = "X";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // AdminPanel
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(639, 411);
+            Controls.Add(button1);
+            Controls.Add(ServicePanelOpenButton);
+            Controls.Add(SearchButton);
+            Controls.Add(label2);
+            Controls.Add(SearchTextBox);
+            Controls.Add(UpdateOrderDataButton);
+            Controls.Add(label1);
+            Controls.Add(OrdersAtWorkDataGridView);
+            Controls.Add(CilentsPanelOpenButton);
+            Controls.Add(UserPanelOpenButton);
+            Controls.Add(OrdersPanelOpenButton);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "AdminPanel";
+            Text = "AdminPa";
+            ((System.ComponentModel.ISupportInitialize)OrdersAtWorkDataGridView).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
 
-		}
+        #endregion
 
-		#endregion
-
-		private Button OrdersPanelOpenButton;
-		private Button UserPanelOpenButton;
-		private Button CilentsPanelOpenButton;
-		private DataGridView OrdersAtWorkDataGridView;
-		private Label label1;
-		private Button UpdateOrderDataButton;
-		private TextBox SearchTextBox;
-		private Label label2;
-		private Button SearchButton;
-		private Button ServicePanelOpenButton;
-	}
+        private Button ServicePanelOpenButton;
+        private Button SearchButton;
+        private Label label2;
+        private TextBox SearchTextBox;
+        private Button UpdateOrderDataButton;
+        private Label label1;
+        private DataGridView OrdersAtWorkDataGridView;
+        private Button CilentsPanelOpenButton;
+        private Button UserPanelOpenButton;
+        private Button OrdersPanelOpenButton;
+        private Button button1;
+    }
 }
